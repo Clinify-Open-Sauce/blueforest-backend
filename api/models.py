@@ -35,10 +35,7 @@ class User(models.Model):
         return self.discord_tag
 
 
-class Feed(models.Model):
-    user_id = models.ForeignKey(User, on_delete= models.CASCADE)
-    feed_cotent = models.CharField(max_length= 100)
-    
+
 
 
 
