@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-9f0(_7ak&!y3rtcp2eesj1gn6p)etvd34bsj-ps6$$3my=ho+k
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '*.herokuapp.com'
+    'blueforest-123.herokuapp.com'
 ]
 
 
