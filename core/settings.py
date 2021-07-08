@@ -13,11 +13,19 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+
 import dj_database_url
+import environ
+
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+env =  environ.Env()
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,7 +39,11 @@ SECRET_KEY = 'django-insecure-9f0(_7ak&!y3rtcp2eesj1gn6p)etvd34bsj-ps6$$3my=ho+k
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'blueforest-123.herokuapp.com'
+    'blueforest-123.herokuapp.com',
+    '127.0.0.1:8000', 
+    'localhost',
+    '127.0.0.1'
+
 ]
 
 
@@ -85,12 +97,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('DBENGINE'),
-        'NAME': os.environ.get('DBNAME'),
-        'USER': os.environ.get('DBUSER'),
-        'PASSWORD': os.environ.get('DBPASSWORD'),
-        'HOST': os.environ.get('DBHOST'),
-        'PORT': os.environ.get('DBPORT')
+        'ENGINE':  'django.db.backends.postgresql_psycopg2',
+        'NAME': env('DBNAME'),
+        'USER': env('DBUSER'),
+        'PASSWORD': env('DBPASSWORD'),
+        'HOST': env('DBHOST'),
+        'PORT': env('DBPORT')
         
     }
 }

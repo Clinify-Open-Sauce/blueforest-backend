@@ -1,8 +1,4 @@
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
-from django.db.models.base import Model
-from django.utils.translation import deactivate
-
 
 
 class Tree(models.Model):

@@ -1,5 +1,3 @@
-
-
 import graphene
 from graphene_django import DjangoObjectType, DjangoListField
 from .models import Tree, User
