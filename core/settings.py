@@ -25,7 +25,7 @@ environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-env =  environ.Env()
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -40,6 +40,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'blueforest-123.herokuapp.com',
+    '127.0.0.1:8000', 
+    'localhost',
+    '127.0.0.1'
+    
 ]
 
 
