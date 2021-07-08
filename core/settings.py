@@ -40,10 +40,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'blueforest-123.herokuapp.com',
-    '127.0.0.1:8000', 
-    'localhost',
-    '127.0.0.1'
-
 ]
 
 
